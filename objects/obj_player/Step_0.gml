@@ -24,11 +24,13 @@ var _vel_spd = (abs(_xv) + abs(_yv) > 0 ? spd : 0);
 xvel += lengthdir_x(_vel_spd, _vel_dir);
 yvel += lengthdir_y(_vel_spd, _vel_dir);
 
-xvel /= 1.5
-yvel /= 1.5
+xvel /= 1.5;
+yvel /= 1.5;
 
-x += xvel
-y += yvel
+x += xvel;
+if (x < 64 || x > 1216) { x -= xvel; xvel = 0; }
+y += yvel;
+if (y < 64 || y > 896) { y -= yvel; yvel = 0; }
 
 if (_shift) {
 	invis = min(1, invis + 0.1);
@@ -52,8 +54,12 @@ if (_dash && dash_cooldown <= 0) {
 			p_dir : d
 		});
 	}
-	x += lengthdir_x(_vel_spd * 25, _vel_dir);
-	y += lengthdir_y(_vel_spd * 25, _vel_dir);
+	repeat (25) {
+		x += lengthdir_x(_vel_spd, _vel_dir);
+		if (x < 64 || x > 1216) { x -= lengthdir_x(_vel_spd, _vel_dir); }
+		y += lengthdir_y(_vel_spd, _vel_dir);
+		if (y < 64 || y > 896) { y -= lengthdir_y(_vel_spd, _vel_dir); }
+	}
 	dash_cooldown = 40;
 }
 
