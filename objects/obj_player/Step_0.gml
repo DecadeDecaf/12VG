@@ -1,3 +1,7 @@
+if (g.reading) {
+	exit;
+}
+
 var _up = (keyboard_check(ord("W")) || keyboard_check(vk_up));
 var _down = (keyboard_check(ord("S")) || keyboard_check(vk_down));
 var _left = (keyboard_check(ord("A")) || keyboard_check(vk_left));

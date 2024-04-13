@@ -1,6 +1,6 @@
 fc = 0;
 
-dash_cooldown = 0
+dash_cooldown = 0;
 cooldown = 0;
 firerate = 9;
 shotspeed = 19;
