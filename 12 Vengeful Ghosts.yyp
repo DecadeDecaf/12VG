@@ -30,6 +30,7 @@
   "resources": [
     {"id":{"name":"spr_bullet_enemy_large","path":"sprites/spr_bullet_enemy_large/spr_bullet_enemy_large.yy",},},
     {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},},
+    {"id":{"name":"spr_player_dash_particle","path":"sprites/spr_player_dash_particle/spr_player_dash_particle.yy",},},
     {"id":{"name":"spr_bullet_player_particle","path":"sprites/spr_bullet_player_particle/spr_bullet_player_particle.yy",},},
     {"id":{"name":"spr_bullet_enemy_small","path":"sprites/spr_bullet_enemy_small/spr_bullet_enemy_small.yy",},},
     {"id":{"name":"spr_player_hitbox","path":"sprites/spr_player_hitbox/spr_player_hitbox.yy",},},
@@ -42,6 +43,7 @@
     {"id":{"name":"spr_bullet_pow","path":"sprites/spr_bullet_pow/spr_bullet_pow.yy",},},
     {"id":{"name":"bg_lines","path":"sprites/bg_lines/bg_lines.yy",},},
     {"id":{"name":"spr_bullet_player","path":"sprites/spr_bullet_player/spr_bullet_player.yy",},},
+    {"id":{"name":"obj_particle","path":"objects/obj_particle/obj_particle.yy",},},
     {"id":{"name":"spr_bullet_enemy_particle","path":"sprites/spr_bullet_enemy_particle/spr_bullet_enemy_particle.yy",},},
     {"id":{"name":"shd_grayscale","path":"shaders/shd_grayscale/shd_grayscale.yy",},},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},},

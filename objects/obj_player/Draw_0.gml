@@ -1,5 +1,9 @@
-var _xs = image_xscale
-var _alph = image_alpha - (invis / 2)
+var _xs = image_xscale;
+var _alph = image_alpha - (invis / 2);
+
+if (dash_cooldown >= 30) {
+	_alph -= 0.5 - (0.05 * (40 - dash_cooldown))
+}
 
 var _ps = min(1, (pow / 10) * 1.5);
 draw_sprite_ext(spr_bullet_pow, 0, x, y - 64, _ps, _ps, 0, -1, 1);

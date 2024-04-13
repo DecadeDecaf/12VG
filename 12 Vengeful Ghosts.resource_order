@@ -12,6 +12,7 @@
   "ResourceOrderSettings": [
     {"name":"spr_bullet_enemy_large","order":4,"path":"sprites/spr_bullet_enemy_large/spr_bullet_enemy_large.yy",},
     {"name":"obj_camera","order":3,"path":"objects/obj_camera/obj_camera.yy",},
+    {"name":"spr_player_dash_particle","order":12,"path":"sprites/spr_player_dash_particle/spr_player_dash_particle.yy",},
     {"name":"spr_bullet_player_particle","order":7,"path":"sprites/spr_bullet_player_particle/spr_bullet_player_particle.yy",},
     {"name":"spr_bullet_enemy_small","order":5,"path":"sprites/spr_bullet_enemy_small/spr_bullet_enemy_small.yy",},
     {"name":"spr_player_hitbox","order":2,"path":"sprites/spr_player_hitbox/spr_player_hitbox.yy",},
@@ -22,6 +23,7 @@
     {"name":"spr_bullet_pow","order":9,"path":"sprites/spr_bullet_pow/spr_bullet_pow.yy",},
     {"name":"bg_lines","order":11,"path":"sprites/bg_lines/bg_lines.yy",},
     {"name":"spr_bullet_player","order":6,"path":"sprites/spr_bullet_player/spr_bullet_player.yy",},
+    {"name":"obj_particle","order":4,"path":"objects/obj_particle/obj_particle.yy",},
     {"name":"spr_bullet_enemy_particle","order":8,"path":"sprites/spr_bullet_enemy_particle/spr_bullet_enemy_particle.yy",},
     {"name":"spr_player","order":1,"path":"sprites/spr_player/spr_player.yy",},
   ],
