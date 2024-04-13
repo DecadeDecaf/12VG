@@ -6,8 +6,11 @@ firerate = 9;
 shotspeed = 19;
 dmg = 1;
 
+hearts = 1;
+
 xvel = 0;
 yvel = 0;
 
+dead = false;
 invis = 0;
 pow = 0;

@@ -14,9 +14,43 @@ if (g.reading && rfc > 45) {
 			g.progress = 0;
 			g.chapter++;
 			if (g.chapter == 1) {
-				instance_create_depth(x, y, depth, obj_prompts)
+				instance_create_depth(x, y, depth, obj_prompts);
 			} else if (g.chapter == 2) {
-				instance_create_depth(640, 160, depth, obj_enemy)
+				var _enemy = instance_create_depth(640, 160, depth, obj_enemy);
+				_enemy.max_hp = 34;
+				_enemy.hp = 34;
+			} else if (g.chapter == 3) {
+				var _enemy = instance_create_depth(640, 160, depth, obj_enemy);
+				_enemy.max_hp = 28;
+				_enemy.hp = 28;
+				_enemy.movespd = 6;
+				_enemy.moverate = 68;
+				_enemy.shoot = false;
+				_enemy.shotspeed = 5;
+				_enemy.ball = true;
+			} else if (g.chapter == 4) {
+				var _enemy = instance_create_depth(640, 160, depth, obj_enemy);
+				_enemy.max_hp = 45;
+				_enemy.hp = 45;
+				_enemy.firerate = 7;
+				_enemy.shotspeed = 7.5;
+				_enemy.zag = true;
+			} else if (g.chapter == 5) {
+				var _enemy = instance_create_depth(640, 160, depth, obj_enemy);
+				_enemy.max_hp = 50;
+				_enemy.hp = 50;
+				_enemy.firerate = 85;
+				_enemy.shotspeed = 10;
+				_enemy.waves = true;
+			} else if (g.chapter == 6) {
+				var _enemy = instance_create_depth(640, 160, depth, obj_enemy);
+				_enemy.max_hp = 78;
+				_enemy.hp = 78;
+				_enemy.movespd = 3;
+				_enemy.moverate = 134;
+				_enemy.firerate = 9;
+				_enemy.shotspeed = 5.5;
+				_enemy.spin = true;
 			}
 		}
 	}

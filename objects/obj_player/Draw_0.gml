@@ -1,3 +1,7 @@
+if (g.reading || dead) {
+	exit;
+}
+
 var _xs = image_xscale;
 var _alph = image_alpha - (invis / 2);
 

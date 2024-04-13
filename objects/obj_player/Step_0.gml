@@ -1,4 +1,4 @@
-if (g.reading) {
+if (g.reading || dead) {
 	exit;
 }
 
@@ -54,7 +54,7 @@ if (_dash && dash_cooldown <= 0) {
 			p_dir : d
 		});
 	}
-	repeat (25) {
+	repeat (35) {
 		x += lengthdir_x(_vel_spd, _vel_dir);
 		if (x < 64 || x > 1216) { x -= lengthdir_x(_vel_spd, _vel_dir); }
 		y += lengthdir_y(_vel_spd, _vel_dir);
@@ -74,4 +74,16 @@ if (_shoot && cooldown <= 0) {
 
 if (pow > 0) {
 	pow--;
+}
+
+if (hearts <= 0) {
+	for (var d = 0; d < 360; d += 120) {
+		instance_create_depth(x, y, depth + 1, obj_particle, {
+			life : 15,
+			p_spd : 5,
+			p_dir : d
+		});
+	}
+	dead = true;
+	alarm[0] = 70;
 }

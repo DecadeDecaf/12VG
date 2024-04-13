@@ -1,1 +1,1 @@
-instance_destroy();
+if (!zag && !waves) { instance_destroy(); }

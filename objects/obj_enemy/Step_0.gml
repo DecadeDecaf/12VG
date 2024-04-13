@@ -12,7 +12,7 @@ if (fc % moverate == 0) {
 	if (y > 160 && irandom_range(1, 10) <= 2) {
 		enemy_up = true;
 	}
-	if (y < 200 && irandom_range(1, 10) <= 2) {
+	if (y < (spin ? 400 : 200) && irandom_range(1, 10) <= (spin ? 4 : 2)) {
 		enemy_down = true;
 	}
 	alarm[0] = ceil(moverate / 2);
@@ -30,7 +30,7 @@ var _yv = 0 + _down - _up;
 if (image_xscale > 0 && _xv < 0) { image_xscale *= -1; }
 if (image_xscale < 0 && _xv > 0) { image_xscale *= -1; }
 
-var spd = 4
+var spd = movespd;
 var _vel_dir = point_direction(0, 0, _xv, _yv);
 var _vel_spd = (abs(_xv) + abs(_yv) > 0 ? spd : 0);
 
@@ -43,18 +43,55 @@ yvel /= 1.5
 x += xvel
 y += yvel
 
-if (cooldown > 0) {
+if (cooldown > 0 && (shoot || ball)) {
 	cooldown--;
 }
 
-if (cooldown <= 0) {
-	instance_create_depth(x, y + 80, depth - 1, obj_bullet_enemy, {
-		shotspeed : shotspeed,
-		dmg : dmg,
-		image_angle : 270
-	});
+if (cooldown <= 0 && (shoot || ball) && (!zag || _vel_spd == 0)) {
+	var _shots = 1;
+	if (zag || spin) { _shots = 2; }
+	if (waves) { _shots = 32; }
+	for (var s = 0; s < _shots; s++) {
+		var _bullet = instance_create_depth(x, y + 80, depth - 1, obj_bullet_enemy, {
+			shotspeed : shotspeed,
+			dmg : dmg,
+			image_angle : 270
+		});
+		if (ball) {
+			_bullet.ball = true;
+			_bullet.image_angle = random_range(220, 320);
+			_bullet.sprite_index = spr_bullet_enemy_large;
+			if (instance_number(obj_bullet_enemy) >= 3) { ball = false; }
+		}
+		if (zag) {
+			_bullet.zag = true;
+			_bullet.image_angle = (s == 0 ? 230 : 310);
+		}
+		if (waves) {
+			var _xx = 20;
+			var _yy = 0;
+			var _line_ang = 0;
+			var _ang = 270;
+			var _spread = 40;
+			switch (wave % 3) {
+				case 1: _line_ang = 30; _ang = 300; _xx = -320; _spread = 45; break;
+				case 2: _line_ang = -30; _ang = 240; _xx = 360; _yy = -640; _spread = 45; _xx -= lengthdir_x(_line_ang, 90); break;
+				case 0:
+				default: break;
+			}
+			_xx += lengthdir_x(_spread, _line_ang) * s;
+			_yy += lengthdir_y(_spread, _line_ang) * s;
+			_bullet.x = _xx;
+			_bullet.y = _yy;
+			_bullet.image_angle = _ang;
+			_bullet.waves = true;
+		}
+		if (spin) {
+			_bullet.image_angle = random_range(0, 360)
+		}
+	}
 	cooldown = firerate;
-	pow = 9;
+	if (!waves) { pow = 9; } else { wave++; }
 }
 
 if (pow > 0) {
