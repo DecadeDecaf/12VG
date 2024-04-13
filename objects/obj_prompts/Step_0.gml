@@ -33,8 +33,7 @@ if (!happy) {
 		if (image_index < 3) {
 			image_index++;
 		} else {
-			g.reading = true;
-			with (obj_main) { rfc = 0; }
+			with (obj_main) { alarm[0] = 45; }
 			instance_destroy();
 		}
 	}

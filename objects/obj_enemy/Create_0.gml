@@ -5,7 +5,7 @@ firerate = 67;
 shotspeed = 6;
 dmg = 1;
 
-max_hp = 40;
+max_hp = 34;
 hp = max_hp;
 
 moverate = 112;

@@ -60,3 +60,15 @@ if (cooldown <= 0) {
 if (pow > 0) {
 	pow--;
 }
+
+if (hp <= 0) {
+	for (var d = 0; d < 360; d += 120) {
+		instance_create_depth(x, y, depth + 1, obj_particle, {
+			life : 15,
+			p_spd : 5,
+			p_dir : d
+		});
+	}
+	with (obj_main) { alarm[0] = 45; }
+	instance_destroy();
+}

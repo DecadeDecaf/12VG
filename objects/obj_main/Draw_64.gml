@@ -6,6 +6,8 @@ if (g.reading) {
 	draw_script();
 }
 
+shader_reset();
+
 with (obj_enemy) {
 	var _hp_perc = (hp / max_hp);
 
@@ -14,8 +16,6 @@ with (obj_enemy) {
 	draw_set_color(#FFFFFF);
 	draw_roundrect(18, 18, 18 + (1244 * _hp_perc), 46, false);
 }
-
-shader_reset();
 
 var _gf = floor(g.gfc / 6) % 6;
 draw_sprite_ext(bg_grain, _gf, 0, 0, 1, 1, 0, -1, 0.1);

@@ -11,6 +11,7 @@ if (place_meeting(x, y, _boss)) {
 			p_dir : d
 		});
 	}
+	_boss.hp -= dmg;
 	instance_destroy();
 }
 
