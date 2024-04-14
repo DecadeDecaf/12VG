@@ -8,6 +8,7 @@ movespd = 4;
 
 max_hp = 34;
 hp = max_hp;
+box_offset = 0;
 
 moverate = 112;
 shoot = true;
@@ -17,6 +18,12 @@ zag = false;
 waves = false;
 wave = 0;
 spin = false;
+snipe = false;
+star = false;
+sides = false;
+side = 0;
+shaky = false;
+shaky_spread = 30;
 
 enemy_up = false;
 enemy_down = false;

@@ -51,6 +51,8 @@ if (cooldown <= 0 && (shoot || ball) && (!zag || _vel_spd == 0)) {
 	var _shots = 1;
 	if (zag || spin) { _shots = 2; }
 	if (waves) { _shots = 32; }
+	if (sides) { _shots = 7; }
+	if (star) { _shots = 5; }
 	for (var s = 0; s < _shots; s++) {
 		var _bullet = instance_create_depth(x, y + 80, depth - 1, obj_bullet_enemy, {
 			shotspeed : shotspeed,
@@ -89,9 +91,34 @@ if (cooldown <= 0 && (shoot || ball) && (!zag || _vel_spd == 0)) {
 		if (spin) {
 			_bullet.image_angle = random_range(0, 360)
 		}
+		if (snipe) {
+			if (instance_exists(obj_player)) {
+				_bullet.image_angle = point_direction(x, y + 80, obj_player.x, obj_player.y);
+			}
+		}
+		if (star) {
+			var _star_ang = ((fc % 144) * 2.5) + (s * 72);
+			_bullet.image_angle = _star_ang;
+		}
+		if (sides) {
+			var _spread = 160;
+			var _left_side = (side % 2 == 0)
+			var _xx = (_left_side ? -16 : 1296);
+			var _yy = (_left_side ? 0 : _spread / 2);
+			_xx += lengthdir_x(_spread, 270) * s;
+			_yy += lengthdir_y(_spread, 270) * s;
+			_bullet.x = _xx;
+			_bullet.y = _yy;
+			_bullet.image_angle = (_left_side ? 0 : 180);
+			_bullet.sides = true;
+			_bullet.sprite_index = spr_bullet_enemy_large;
+		}
+		if (shaky) {
+			_bullet.image_angle += random_range(-shaky_spread, shaky_spread);
+		}
 	}
 	cooldown = firerate;
-	if (!waves) { pow = 9; } else { wave++; }
+	if (!waves && !sides) { pow = 9; } else { wave++; side++; }
 }
 
 if (pow > 0) {
@@ -106,6 +133,10 @@ if (hp <= 0) {
 			p_dir : d
 		});
 	}
-	with (obj_main) { alarm[0] = 45; }
+	if (instance_number(obj_enemy) <= 1) {
+		with (obj_main) { alarm[0] = 45; }
+	} else {
+		with (obj_enemy) { firerate = 11; shotspeed = 10.5; shaky_spread = 40; }
+	}
 	instance_destroy();
 }

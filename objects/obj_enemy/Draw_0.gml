@@ -1,6 +1,15 @@
 var _xs = image_xscale;
 var _alph = image_alpha
 
+if (snipe && cooldown > 0 && cooldown < 20) {
+	if (instance_exists(obj_player)) {
+		draw_set_alpha(1 - (cooldown / 20));
+		draw_circle_color(x, y + 80, 6, #FFA2AC, #FFA2AC, false);
+		draw_line_width_color(x, y + 80, obj_player.x, obj_player.y, 2.5, #FFA2AC, #FA6E79);
+		draw_set_alpha(1);
+	}
+}
+
 var _ps = min(1, (pow / 10) * 1.5);
 draw_sprite_ext(spr_bullet_pow, 0, x, y + 64, _ps, _ps, 0, -1, 1);
 

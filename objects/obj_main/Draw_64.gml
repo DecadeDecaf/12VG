@@ -1,4 +1,4 @@
-shader_set(shd_grayscale);
+if (g.filter) { shader_set(shd_grayscale); }
 draw_surface(application_surface, 0, 0);
 
 if (g.reading) {
@@ -10,11 +10,11 @@ shader_reset();
 
 with (obj_enemy) {
 	var _hp_perc = (hp / max_hp);
-
+	var _yoff = box_offset;
 	draw_set_color(#10121C);
-	draw_roundrect(16, 16, 1264, 48, false);
+	draw_roundrect(16, 16 + _yoff, 1264, 50 + _yoff, false);
 	draw_set_color(#FFFFFF);
-	draw_roundrect(18, 18, 18 + (1244 * _hp_perc), 46, false);
+	draw_roundrect(18, 18 + _yoff, 18 + (1244 * _hp_perc), 48 + _yoff, false);
 }
 
 var _gf = floor(g.gfc / 6) % 6;

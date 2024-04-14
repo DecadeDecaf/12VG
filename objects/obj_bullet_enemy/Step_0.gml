@@ -23,7 +23,7 @@ if (zag && fc % 45 == 0) {
 var _boss = instance_nearest(x, y, obj_player);
 
 if (place_meeting(x, y, _boss)) {
-	if (_boss.dash_cooldown < 30) {
+	if (_boss.dash_cooldown < 30 && !_boss.dead) {
 		var _part_spread = 35;
 		var _part_back = image_angle + 180 - _part_spread;
 		var _part_bac_over = image_angle + 180 + _part_spread;
