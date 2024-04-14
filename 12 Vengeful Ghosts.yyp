@@ -40,6 +40,7 @@
     {"id":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},},
     {"id":{"name":"spr_bullet_player_particle","path":"sprites/spr_bullet_player_particle/spr_bullet_player_particle.yy",},},
     {"id":{"name":"spr_bullet_enemy_small","path":"sprites/spr_bullet_enemy_small/spr_bullet_enemy_small.yy",},},
+    {"id":{"name":"rm_start","path":"rooms/rm_start/rm_start.yy",},},
     {"id":{"name":"spr_enemy_3","path":"sprites/spr_enemy_3/spr_enemy_3.yy",},},
     {"id":{"name":"fnt_font","path":"fonts/fnt_font/fnt_font.yy",},},
     {"id":{"name":"spr_player_hitbox","path":"sprites/spr_player_hitbox/spr_player_hitbox.yy",},},
@@ -53,6 +54,7 @@
     {"id":{"name":"spr_player_tail","path":"sprites/spr_player_tail/spr_player_tail.yy",},},
     {"id":{"name":"scr_script","path":"scripts/scr_script/scr_script.yy",},},
     {"id":{"name":"bg_warning","path":"sprites/bg_warning/bg_warning.yy",},},
+    {"id":{"name":"obj_startup","path":"objects/obj_startup/obj_startup.yy",},},
     {"id":{"name":"obj_bullet_enemy","path":"objects/obj_bullet_enemy/obj_bullet_enemy.yy",},},
     {"id":{"name":"spr_enemy_9","path":"sprites/spr_enemy_9/spr_enemy_9.yy",},},
     {"id":{"name":"obj_volumeslider","path":"objects/obj_volumeslider/obj_volumeslider.yy",},},
@@ -80,6 +82,7 @@
     {"id":{"name":"rm_game","path":"rooms/rm_game/rm_game.yy",},},
   ],
   "RoomOrderNodes": [
+    {"roomId":{"name":"rm_start","path":"rooms/rm_start/rm_start.yy",},},
     {"roomId":{"name":"rm_game","path":"rooms/rm_game/rm_game.yy",},},
   ],
   "templateType": "game",

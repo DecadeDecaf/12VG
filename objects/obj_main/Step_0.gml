@@ -138,9 +138,9 @@ with (obj_enemy) {
 if (warning > 1) { warning = 1; }
 
 var r = keyboard_check_pressed(ord("R"));
-if (r) { game_restart(); }
+if (r && g.desktop) { game_restart(); }
 
 var esc = keyboard_check_pressed(vk_escape);
-if (esc) { game_end(); }
+if (esc && g.desktop) { game_end(); }
 
 handle_fullscreen();
