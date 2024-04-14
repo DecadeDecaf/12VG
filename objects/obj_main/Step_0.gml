@@ -26,6 +26,7 @@ if (g.reading && rfc > 45) {
 				_enemy.movespd = 6;
 				_enemy.moverate = 68;
 				_enemy.shoot = false;
+				_enemy.firerate = 67;
 				_enemy.shotspeed = 5;
 				_enemy.ball = true;
 			} else if (g.chapter == 4) {
@@ -91,20 +92,35 @@ if (g.reading && rfc > 45) {
 				_enemy2.movespd = 5;
 				_enemy2.moverate = 75;
 				_enemy2.firerate = 26;
-				_enemy1.shotspeed = 7;
+				_enemy2.shotspeed = 7;
 				_enemy2.shaky = true;
 				_enemy2.cooldown = 103;
 				_enemy2.box_offset = 40;
 				_enemy2.fc = 35;
 			} else if (g.chapter == 11) {
 				var _enemy = instance_create_depth(640, 200, depth, obj_enemy);
-				_enemy.max_hp = 80;
-				_enemy.hp = 80;
+				_enemy.max_hp = 90;
+				_enemy.hp = 90;
+				_enemy.movespd = 3.5;
+				_enemy.moverate = 128;
+				_enemy.cycles = true;
+				_enemy.cycle = 1;
+				_enemy.firerate = 67;
+				_enemy.shotspeed = 5;
 				g.filter = false
 			}
 		}
 	}
 }
+
+with (obj_enemy) {
+	if (cycles) {
+		if (cycle == 6 && alarm[2] < 80) { other.warning += 0.025; }
+		else { other.warning = 0; }
+	}
+}
+
+if (warning > 1) { warning = 1; }
 
 var r = keyboard_check_pressed(ord("R"));
 if (r) { game_restart(); }

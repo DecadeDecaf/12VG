@@ -42,6 +42,7 @@
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"spr_player_tail","path":"sprites/spr_player_tail/spr_player_tail.yy",},},
     {"id":{"name":"scr_script","path":"scripts/scr_script/scr_script.yy",},},
+    {"id":{"name":"bg_warning","path":"sprites/bg_warning/bg_warning.yy",},},
     {"id":{"name":"obj_bullet_enemy","path":"objects/obj_bullet_enemy/obj_bullet_enemy.yy",},},
     {"id":{"name":"obj_prompts","path":"objects/obj_prompts/obj_prompts.yy",},},
     {"id":{"name":"obj_main","path":"objects/obj_main/obj_main.yy",},},

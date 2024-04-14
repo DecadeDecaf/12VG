@@ -17,6 +17,8 @@ with (obj_enemy) {
 	draw_roundrect(18, 18 + _yoff, 18 + (1244 * _hp_perc), 48 + _yoff, false);
 }
 
+draw_sprite_ext(bg_warning, 0, 0, 0, 1, 1, 0, -1, warning);
+
 var _gf = floor(g.gfc / 6) % 6;
 draw_sprite_ext(bg_grain, _gf, 0, 0, 1, 1, 0, -1, 0.1);
 

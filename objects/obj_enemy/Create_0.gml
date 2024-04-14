@@ -24,6 +24,9 @@ sides = false;
 side = 0;
 shaky = false;
 shaky_spread = 30;
+cycles = false;
+cycle = 0;
+spawned = false;
 
 enemy_up = false;
 enemy_down = false;

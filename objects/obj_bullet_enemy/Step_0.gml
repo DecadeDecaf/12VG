@@ -36,12 +36,26 @@ if (place_meeting(x, y, _boss)) {
 			});
 		}
 		with (_boss) { hearts--; }
-		if (ball) { with (obj_enemy) { ball = true; } }
+		if (ball && !limited) { with (obj_enemy) { ball = true; } }
 		room_speed = 15;
 		instance_destroy();
 	}
 }
 
+if (limited && fc > 450) {
+	var _part_spread = 35;
+	var _part_back = image_angle + 180 - _part_spread;
+	var _part_bac_over = image_angle + 180 + _part_spread;
+	for (var d = _part_back; d <= _part_bac_over; d += _part_spread) {
+		instance_create_depth(x, y, depth + 1, obj_particle, {
+			sprite_index : spr_bullet_enemy_particle,
+			life : 25,
+			p_spd : 5,
+			p_dir : d
+		});
+	}
+	instance_destroy();
+}
 
 if (y > 1088) {
 	instance_destroy();
