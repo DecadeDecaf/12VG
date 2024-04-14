@@ -58,8 +58,8 @@ if (g.reading && rfc > 45) {
 				_enemy.spin = true;
 			} else if (g.chapter == 7) {
 				var _enemy = instance_create_depth(640, 160, depth, obj_enemy);
-				_enemy.max_hp = 38;
-				_enemy.hp = 38;
+				_enemy.max_hp = 32;
+				_enemy.hp = 32;
 				_enemy.movespd = 5;
 				_enemy.moverate = 84;
 				_enemy.firerate = 42;
