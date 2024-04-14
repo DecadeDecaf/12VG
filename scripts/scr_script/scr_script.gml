@@ -47,3 +47,17 @@ function draw_script() {
 	}
 	draw_set_alpha(1);
 }
+
+function time_string(time) {
+	var _secs = floor(time / 60);
+	var _mins = 0;
+	while (_secs > 60) {
+		_mins++;
+		_secs -= 60;
+	}
+	var _sec_string = string(_secs)
+	if (string_length(_secs) == 1) {
+		_sec_string = "0" + _sec_string;
+	}
+	return string(_mins) + "m " + _sec_string + "s";
+}

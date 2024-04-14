@@ -85,5 +85,6 @@ if (hearts <= 0) {
 		});
 	}
 	dead = true;
+	g.deaths++;
 	alarm[0] = 70;
 }

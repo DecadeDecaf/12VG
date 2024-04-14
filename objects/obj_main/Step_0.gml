@@ -8,7 +8,7 @@ if (g.reading && rfc > 45) {
 		if (_cont) {
 			g.progress = _prog;
 		}
-	} else {
+	} else if (g.chapter < 11) {
 		if (_cont) {
 			g.reading = false;
 			g.progress = 0;

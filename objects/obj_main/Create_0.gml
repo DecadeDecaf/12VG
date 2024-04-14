@@ -24,10 +24,13 @@ g.lore = [
 "\"Just give it up, human-lover! This human is getting sentenced or my name↵isn't ghost #9!\" The ninth ghost evidently grew very impatient with you.↵↵\"Wait, ghost #9? What happened to ghost #8?\"↵↵\"YOU'RE ghost #8, doofus! Haven't you been paying attention? This whole↵game is a reference to the 1957 film, 12 Angry Men, wherein the protagonist↵is juror number eight.\"↵↵There's no reaching this one, you decided. It was a lost cause.↵↵(press any key to continue)",
 "\"Does anyone have a REAL reason to accuse the human of guilt?\" You said,↵nearly begging your peers to listen.↵↵\"Yeah! They stole my bike!\" Ghost #10 snarled.↵↵\"Yeah! What ten said!\" Ghost #11 added, in a voice that somehow sounded↵exactly like #10's.↵↵\"Okay, now we're getting somewhere,\" you said, clasping your nonexistent↵hands together. \"But I still don't think that's bad enough to rob the human↵of their otherwise long life.\"↵↵\"Corporal punishment for bike thefts!\"↵↵\"You're thinking of 'capital punishment,' ten,\" the eleventh ghost corrected.↵↵\"Capital punishment for bike thefts!\"↵↵\"Yeah! What ten said!\"↵↵One's brain must stop working when they die, you reasoned.↵↵(press any key to continue)", // 10 and 11
 "Faced with complete desparation, you exhaustedly asked ghost #12, \"what↵about you?\"↵↵\"Well, the way I see it, the human has a disgusting blue soul,\" the twelfth↵ghost scoffed, \"just like you, number eight. Maybe if the human's soul was↵purple, I'd give them a chance, but...\"↵↵First off, yikes, you thought. Then, you scrutinized, \"blue? How can you↵even tell? Everything's in black & white, much like old movies from 1957↵particularly.\"↵↵\"I'll show you, my blue friend,\" ghost #12 put forward.↵↵(press any key to continue)",
-"[Game end.]↵↵(press any key to continue)"
+"After you defeated all eleven of your fellow vengeful ghosts, the human↵carried on with their life. They never forgot about your fight to save↵them.↵↵Seventy years later, they died, and after performing a successful↵heist for number eleven's favorite Ghost Bicycle, they visited you to say↵thank you. You barely even remembered what happened, and you had to↵be reminded about every detail. It was pretty embarrassing.↵↵The end.↵↵[Thank you so much for playing! 12 Vengeful Ghosts was made in less↵than 48 hours for the Ludum Dare 55 compo, with 'Summoning' as its↵theme. All programming, art, writing, music, and sound was created by↵one person within the timeframe.]"
 ];
 g.progress = 0;
 pressed = false;
+
+g.tfc = 0;
+g.deaths = 0;
 
 randomize();
 exception_unhandled_handler(error);
