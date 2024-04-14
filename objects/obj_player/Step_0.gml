@@ -105,4 +105,5 @@ if (hearts <= 0) {
 	dead = true;
 	g.deaths++;
 	alarm[0] = 70;
+	with (obj_main) { alarm[0] = -1; }
 }

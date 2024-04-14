@@ -159,7 +159,9 @@ if (hp <= 0) {
 	audio_sound_pitch(snd_voice_high, random_range(0.95, 1.05))
 	audio_play_sound(snd_voice_high, 2, false);
 	if (instance_number(obj_enemy) <= 1) {
-		with (obj_main) { alarm[0] = 45; }
+		var _dead = false
+		with (obj_player) { _dead = dead; }
+		with (obj_main) { if (!_dead) { alarm[0] = 45; } }
 	} else {
 		with (obj_enemy) {
 			if (other.spawned && cycle == 8) {

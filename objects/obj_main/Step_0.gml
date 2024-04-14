@@ -21,10 +21,12 @@ if (g.reading && rfc > 45) {
 				instance_create_depth(x, y, depth, obj_prompts);
 			} else if (g.chapter == 2) {
 				var _enemy = instance_create_depth(640, 160, depth, obj_enemy);
+				_enemy.sprite_index = spr_enemy_1;
 				_enemy.max_hp = 34;
 				_enemy.hp = 34;
 			} else if (g.chapter == 3) {
 				var _enemy = instance_create_depth(640, 160, depth, obj_enemy);
+				_enemy.sprite_index = spr_enemy_2;
 				_enemy.max_hp = 28;
 				_enemy.hp = 28;
 				_enemy.movespd = 6;
@@ -35,6 +37,7 @@ if (g.reading && rfc > 45) {
 				_enemy.ball = true;
 			} else if (g.chapter == 4) {
 				var _enemy = instance_create_depth(640, 160, depth, obj_enemy);
+				_enemy.sprite_index = spr_enemy_3;
 				_enemy.max_hp = 45;
 				_enemy.hp = 45;
 				_enemy.firerate = 7;
@@ -42,6 +45,7 @@ if (g.reading && rfc > 45) {
 				_enemy.zag = true;
 			} else if (g.chapter == 5) {
 				var _enemy = instance_create_depth(640, 160, depth, obj_enemy);
+				_enemy.sprite_index = spr_enemy_4;
 				_enemy.max_hp = 50;
 				_enemy.hp = 50;
 				_enemy.firerate = 85;
@@ -49,6 +53,7 @@ if (g.reading && rfc > 45) {
 				_enemy.waves = true;
 			} else if (g.chapter == 6) {
 				var _enemy = instance_create_depth(640, 160, depth, obj_enemy);
+				_enemy.sprite_index = spr_enemy_5;
 				_enemy.max_hp = 78;
 				_enemy.hp = 78;
 				_enemy.movespd = 3;
@@ -58,6 +63,7 @@ if (g.reading && rfc > 45) {
 				_enemy.spin = true;
 			} else if (g.chapter == 7) {
 				var _enemy = instance_create_depth(640, 160, depth, obj_enemy);
+				_enemy.sprite_index = spr_enemy_6;
 				_enemy.max_hp = 32;
 				_enemy.hp = 32;
 				_enemy.movespd = 5;
@@ -67,21 +73,24 @@ if (g.reading && rfc > 45) {
 				_enemy.snipe = true;
 			} else if (g.chapter == 8) {
 				var _enemy = instance_create_depth(640, 300, depth, obj_enemy);
-				_enemy.max_hp = 55;
-				_enemy.hp = 55;
+				_enemy.sprite_index = spr_enemy_7;
+				_enemy.max_hp = 62;
+				_enemy.hp = 62;
 				_enemy.movespd = 1;
 				_enemy.firerate = 12;
 				_enemy.shotspeed = 8;
 				_enemy.star = true;
 			} else if (g.chapter == 9) {
 				var _enemy = instance_create_depth(640, 160, depth, obj_enemy);
-				_enemy.max_hp = 32;
-				_enemy.hp = 32;
+				_enemy.sprite_index = spr_enemy_9;
+				_enemy.max_hp = 30;
+				_enemy.hp = 30;
 				_enemy.firerate = 36;
 				_enemy.shotspeed = 10;
 				_enemy.sides = true;
 			} else if (g.chapter == 10) {
 				var _enemy1 = instance_create_depth(440, 200, depth, obj_enemy);
+				_enemy1.sprite_index = spr_enemy_10;
 				_enemy1.max_hp = 27;
 				_enemy1.hp = 27;
 				_enemy1.movespd = 5;
@@ -91,6 +100,7 @@ if (g.reading && rfc > 45) {
 				_enemy1.shaky = true;
 				_enemy1.cooldown = 90;
 				var _enemy2 = instance_create_depth(840, 200, depth, obj_enemy);
+				_enemy2.sprite_index = spr_enemy_11;
 				_enemy2.max_hp = 27;
 				_enemy2.hp = 27;
 				_enemy2.movespd = 5;
@@ -103,6 +113,7 @@ if (g.reading && rfc > 45) {
 				_enemy2.fc = 35;
 			} else if (g.chapter == 11) {
 				var _enemy = instance_create_depth(640, 200, depth, obj_enemy);
+				_enemy.sprite_index = spr_enemy_12;
 				_enemy.max_hp = 90;
 				_enemy.hp = 90;
 				_enemy.movespd = 3.5;

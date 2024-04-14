@@ -16,6 +16,7 @@ if (cycles && cycle == 4) {
 	cooldown = 18;
 } else if (cycles && cycle == 8) {
 	var _enemy2 = instance_create_depth(840, 300, depth, obj_enemy);
+	_enemy2.sprite_index = spr_enemy_10;
 	_enemy2.max_hp = 13;
 	_enemy2.hp = 13;
 	_enemy2.movespd = 5;

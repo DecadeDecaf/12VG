@@ -1,4 +1,5 @@
 instance_destroy(obj_bullet_enemy);
+instance_destroy(obj_bullet_player);
 with (obj_player) { x = 640; y = 800; }
 
 g.reading = true;
