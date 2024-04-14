@@ -10,7 +10,7 @@ rfc = 0;
 warning = 0;
 
 g.reading = true;
-g.chapter = 8;
+g.chapter = 10;
 g.lore = [
 "\"@JYMORTAL!@JN\"↵↵An ethereal, deep voice shook the ground beneath the human's feet.↵↵\"@JYYOU HAVE BROKEN AN ANCIENT LAW. PREPARE TO BE JUDGED BY A JURY↵OF YOUR LATE PEERS.@JN\"↵↵The human looked dumbfounded, until finally replying, \"huh?\"↵↵Instead of a reply, the human was met with the summoning of twelve↵ghosts before them. These ghosts were to decide the human's fate,↵and among them... was YOU!↵↵(press any key to continue)",
 "\"Clearly they're guilty,\" proclaimed ghost #1. \"They broke an ancient rule!\"↵↵You pondered this for a moment, until eventually, you decided to ask.↵\"Which ancient rule, exactly?\"↵↵The first ghost looked at you for a brief moment, slapped its own face,↵and replied, \"does it matter?\"↵↵Believing it does in fact matter, you decided to take things into your↵own hands.↵↵(press any key to continue)",
@@ -22,8 +22,8 @@ g.lore = [
 "\"The afterlife is so much better than the mortal realm anyway,\" ghost #7↵said, \"we'd be doing the human a favor.\"↵↵You gave this line of thinking a few moments to ruminate in your head.↵↵\"Maybe,\" you offered, \"but we'd be stripping them from experiencing the↵rest of their life on Earth. Maybe they're happy here.\"↵↵\"Agree to disagree,\" the seventh ghost stated firmly; it wouldn't budge.↵↵(press any key to continue)",
 // 8
 "\"Just give it up, human-lover! This human is getting sentenced or my name↵isn't ghost #9!\" The ninth ghost evidently grew very impatient with you.↵↵\"Wait, ghost #9? What happened to ghost #8?\"↵↵\"YOU'RE ghost #8, doofus! Haven't you been paying attention? This whole↵game is a reference to the 1957 film, 12 Angry Men, wherein the protagonist↵is juror number eight.\"↵↵There's no reaching this one, you decided. It was a lost cause.↵↵(press any key to continue)",
-"[Placeholder text.]↵↵(press any key to continue)", // 10 and 11
-"[Placeholder text.]↵↵(press any key to continue)",
+"\"Does anyone have a REAL reason to accuse the human of guilt?\" You said,↵nearly begging your peers to listen.↵↵\"Yeah! They stole my bike!\" Ghost #10 snarled.↵↵\"Yeah! What ten said!\" Ghost #11 added, in a voice that somehow sounded↵exactly like #10's.↵↵\"Okay, now we're getting somewhere,\" you said, clasping your nonexistent↵hands together. \"But I still don't think that's bad enough to rob the human↵of their otherwise long life.\"↵↵\"Corporal punishment for bike thefts!\"↵↵\"You're thinking of 'capital punishment,' ten,\" the eleventh ghost corrected.↵↵\"Capital punishment for bike thefts!\"↵↵\"Yeah! What ten said!\"↵↵One's brain must stop working when they die, you reasoned.↵↵(press any key to continue)", // 10 and 11
+"Faced with complete desparation, you exhaustedly asked ghost #12, \"what↵about you?\"↵↵\"Well, the way I see it, the human has a disgusting blue soul,\" the twelfth↵ghost scoffed, \"just like you, number eight. Maybe if the human's soul was↵purple, I'd give them a chance, but...\"↵↵First off, yikes, you thought. Then, you scrutinized, \"blue? How can you↵even tell? Everything's in black & white, much like old movies from 1957↵particularly.\"↵↵\"I'll show you, my blue friend,\" ghost #12 put forward.↵↵(press any key to continue)",
 "[Game end.]↵↵(press any key to continue)"
 ];
 g.progress = 0;

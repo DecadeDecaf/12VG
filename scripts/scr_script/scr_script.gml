@@ -28,7 +28,7 @@ function draw_script() {
 			i += 2;
 		} else if (_symb == "↵") {
 			_xx = _ogx;
-			_yy += 40;
+			_yy += 38;
 		} else {
 			var _xoff = 0;
 			var _yoff = 0;

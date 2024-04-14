@@ -15,7 +15,9 @@ if (spawned) { _alph = min(fc / 20, _alph); }
 var _ps = min(1, (pow / 10) * 1.5);
 draw_sprite_ext(spr_bullet_pow, 0, x, y + 64, _ps, _ps, 0, -1, 1);
 
-draw_sprite_ext(spr_player, 0, x, y, _xs, 1, 0, -1, _alph);
+var _sprite = spr_player;
+if (cycles) { _sprite = spr_enemy_12; }
+draw_sprite_ext(_sprite, 0, x, y, _xs, 1, 0, -1, _alph);
 
 var _frame = (fc % 40);
 var _half_frame = (fc % 20);
@@ -31,4 +33,6 @@ _ty += lengthdir_y(_wind_spd, _wind_dir);
 var _fs = (_half_frame / 20)
 var _ts = (_frame < 20 ? _fs : min(1, (1 - _fs) * 2));
 
-draw_sprite_ext(spr_player_tail, 0, _tx, _ty, _ts * _xs, _ts, 0, -1, _alph);
+var _sprite_tail = spr_player_tail;
+if (cycles) { _sprite_tail = spr_enemy_12_tail; }
+draw_sprite_ext(_sprite_tail, 0, _tx, _ty, _ts * _xs, _ts, 0, -1, _alph);

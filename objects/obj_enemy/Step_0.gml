@@ -152,7 +152,8 @@ if (hp <= 0) {
 		instance_create_depth(x, y, depth + 1, obj_particle, {
 			life : 15,
 			p_spd : 5,
-			p_dir : d
+			p_dir : d,
+			sprite_index : (cycles ? spr_enemy_12_particle : spr_player_dash_particle)
 		});
 	}
 	if (instance_number(obj_enemy) <= 1) {
