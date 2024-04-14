@@ -14,3 +14,5 @@ yvel = 0;
 dead = false;
 invis = 0;
 pow = 0;
+
+focusing = false;

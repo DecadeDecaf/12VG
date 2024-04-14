@@ -12,6 +12,8 @@ if (place_meeting(x, y, _boss)) {
 		});
 	}
 	_boss.hp -= dmg;
+	audio_sound_pitch(snd_hit, random_range(0.95, 1.05))
+	audio_play_sound(snd_hit, 2, false);
 	instance_destroy();
 }
 

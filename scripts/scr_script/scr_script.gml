@@ -48,6 +48,38 @@ function draw_script() {
 	draw_set_alpha(1);
 }
 
+function play_voice() {
+	audio_stop_sound(snd_voice_low);
+	audio_stop_sound(snd_voice_high);
+	audio_sound_pitch(snd_voice_low, random_range(0.95, 1.05))
+	audio_sound_pitch(snd_voice_high, random_range(0.95, 1.05))
+	var _txt = g.lore[@ g.chapter];
+	var _prog = floor(g.progress);
+	var _jiggle = false;
+	for (var i = 0; i < _prog; i++) {
+		var _symb = string_char_at(_txt, i + 1);
+		var _next = [];
+		for (var ii = 2; ii < 5; ii++) {
+			array_push(_next, string_char_at(_txt, i + ii));
+		}
+		if (_symb == "@") {
+			if (_next[@ 0] == "J") {
+				if (_next[@ 1] == "Y") {
+					_jiggle = true;
+				} else if (_next[@ 1] == "N") {
+					_jiggle = false;
+				}
+			}
+			i += 2;
+		}
+	}
+	if (_jiggle) {
+		audio_play_sound(snd_voice_low, 0, false);
+	} else {
+		audio_play_sound(snd_voice_high, 0, false);
+	}
+}
+
 function time_string(time) {
 	var _secs = floor(time / 60);
 	var _mins = 0;

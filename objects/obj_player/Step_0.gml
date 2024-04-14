@@ -33,8 +33,18 @@ y += yvel;
 if (y < 64 || y > 896) { y -= yvel; yvel = 0; }
 
 if (_shift) {
+	if (!focusing) {
+		audio_sound_gain(mus_theme, 0, 100);
+		audio_sound_gain(mus_theme_focus, 0.5, 100);
+		focusing = true;
+	}
 	invis = min(1, invis + 0.1);
 } else {
+	if (focusing) {
+		audio_sound_gain(mus_theme, 0.5, 100);
+		audio_sound_gain(mus_theme_focus, 0, 100);
+		focusing = false;
+	}
 	invis = max(0, invis - 0.1);
 }
 
@@ -61,6 +71,8 @@ if (_dash && dash_cooldown <= 0) {
 		if (y < 64 || y > 896) { y -= lengthdir_y(_vel_spd, _vel_dir); }
 	}
 	dash_cooldown = 40;
+	audio_sound_pitch(snd_dodge, random_range(0.95, 1.05))
+	audio_play_sound(snd_dodge, 2, false);
 }
 
 if (_shoot && cooldown <= 0) {
@@ -69,6 +81,8 @@ if (_shoot && cooldown <= 0) {
 		dmg : dmg
 	});
 	cooldown = firerate;
+	audio_sound_pitch(snd_pew, random_range(0.95, 1.05))
+	audio_play_sound(snd_pew, 2, false);
 	pow = 7;
 }
 
@@ -77,6 +91,10 @@ if (pow > 0) {
 }
 
 if (hearts <= 0) {
+	audio_sound_pitch(snd_hit, random_range(0.95, 1.05))
+	audio_play_sound(snd_hit, 2, false);
+	audio_sound_pitch(snd_voice_high, random_range(0.95, 1.05))
+	audio_play_sound(snd_voice_high, 2, false);
 	for (var d = 0; d < 360; d += 120) {
 		instance_create_depth(x, y, depth + 1, obj_particle, {
 			life : 15,

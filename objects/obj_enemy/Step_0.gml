@@ -156,6 +156,8 @@ if (hp <= 0) {
 			sprite_index : (cycles ? spr_enemy_12_particle : spr_player_dash_particle)
 		});
 	}
+	audio_sound_pitch(snd_voice_high, random_range(0.95, 1.05))
+	audio_play_sound(snd_voice_high, 2, false);
 	if (instance_number(obj_enemy) <= 1) {
 		with (obj_main) { alarm[0] = 45; }
 	} else {
