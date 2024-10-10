@@ -5,7 +5,7 @@ if (g.reading || dead) {
 var _xs = image_xscale;
 var _alph = image_alpha - (invis / 2);
 
-if (dash_cooldown >= 30) {
+if (dash_cooldown >= 25) {
 	_alph -= 0.5 - (0.05 * (40 - dash_cooldown))
 }
 

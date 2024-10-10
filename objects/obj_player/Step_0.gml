@@ -2,6 +2,24 @@ if (g.reading || dead) {
 	exit;
 }
 
+if (hearts <= 0) {
+	audio_sound_pitch(snd_hit, random_range(0.95, 1.05))
+	audio_play_sound(snd_hit, 2, false);
+	audio_sound_pitch(snd_voice_high, random_range(0.95, 1.05))
+	audio_play_sound(snd_voice_high, 2, false);
+	for (var d = 0; d < 360; d += 120) {
+		instance_create_depth(x, y, depth + 1, obj_particle, {
+			life : 15,
+			p_spd : 5,
+			p_dir : d
+		});
+	}
+	dead = true;
+	g.deaths++;
+	alarm[0] = 70;
+	with (obj_main) { alarm[0] = -1; }
+}
+
 var _up = (keyboard_check(ord("W")) || keyboard_check(vk_up));
 var _down = (keyboard_check(ord("S")) || keyboard_check(vk_down));
 var _left = (keyboard_check(ord("A")) || keyboard_check(vk_left));
@@ -88,22 +106,4 @@ if (_shoot && cooldown <= 0) {
 
 if (pow > 0) {
 	pow--;
-}
-
-if (hearts <= 0) {
-	audio_sound_pitch(snd_hit, random_range(0.95, 1.05))
-	audio_play_sound(snd_hit, 2, false);
-	audio_sound_pitch(snd_voice_high, random_range(0.95, 1.05))
-	audio_play_sound(snd_voice_high, 2, false);
-	for (var d = 0; d < 360; d += 120) {
-		instance_create_depth(x, y, depth + 1, obj_particle, {
-			life : 15,
-			p_spd : 5,
-			p_dir : d
-		});
-	}
-	dead = true;
-	g.deaths++;
-	alarm[0] = 70;
-	with (obj_main) { alarm[0] = -1; }
 }
