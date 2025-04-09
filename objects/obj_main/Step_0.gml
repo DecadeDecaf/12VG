@@ -18,6 +18,7 @@ if (g.reading && rfc > 45) {
 			g.progress = 0;
 			g.chapter++;
 			if (g.chapter == 1) {
+				ng_request_login();
 				instance_create_depth(x, y, depth, obj_prompts);
 			} else if (g.chapter == 2) {
 				var _enemy = instance_create_depth(640, 160, depth, obj_enemy);

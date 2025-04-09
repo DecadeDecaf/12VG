@@ -45,3 +45,10 @@ display_reset(8, true);
 
 audio_play_sound(mus_theme, 0, true);
 audio_play_sound(mus_theme_focus, -1, true);
+
+g.newgrounds = true;
+
+if (g.newgrounds) {
+	ng_connect("60035:DIPrzi4A", "8Td74PFS2e5F3W9qMb9jtQ==");
+	ng_initialize_medals_and_scoreboard();
+}
